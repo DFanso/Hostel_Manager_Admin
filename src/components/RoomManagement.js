@@ -7,7 +7,7 @@ function RoomManagement() {
   const [roomId, setRoomId] = useState("");
   const [updateStudentId, setUpdateStudentId] = useState("");
   const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MDJjMzY5MjI4MTk0MDE2NjY2MmQiLCJpYXQiOjE2ODE1MDQ4MTEsImV4cCI6MTY4MTUwODQxMX0.vyaohe-bgO2y4mRnwNbyUPkBYtHhCQ6rDrjLqo4emhc";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MDJjMzY5MjI4MTk0MDE2NjY2MmQiLCJpYXQiOjE2ODE2MzIyNjksImV4cCI6MTY4MTYzNTg2OX0.1Iwx_L8yhjH4bE-XT_VZ7t-sV781YhzQTmhvHvYzn-s";
   const [successMessage, setSuccessMessage] = useState("");
 
   const addRoom = async () => {

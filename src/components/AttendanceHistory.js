@@ -11,7 +11,7 @@ function AttendanceHistory(props) {
     try {
       console.log(studentId, dataCount);
       const token =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MDJjMzY5MjI4MTk0MDE2NjY2MmQiLCJpYXQiOjE2ODE1NTQ2NjMsImV4cCI6MTY4MTU1ODI2M30.lCdWumBTBWmDPhk2WDdUs5gFjsYmo-8hsWWbUeIwbLc";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MDJjMzY5MjI4MTk0MDE2NjY2MmQiLCJpYXQiOjE2ODE2MzIyNjksImV4cCI6MTY4MTYzNTg2OX0.1Iwx_L8yhjH4bE-XT_VZ7t-sV781YhzQTmhvHvYzn-s";
       const response = await axios.get(
         `http://localhost:3000/api/students/${searchTerm}?dataCount=${dataCount}`,
         {
