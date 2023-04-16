@@ -6,26 +6,12 @@ import PaymentHistory from './PaymentHistory'; // import the PaymentHistory comp
 import AttendanceHistory from './AttendanceHistory'; // import the AttendanceHistory component
 
 const Dashboard = ({ selectedItem }) => {
-    const summaryItems = [
-        { title: 'Total Registered Students:', value: 100 },
-        { title: 'Total Vacant Rooms:', value: 50 },
-        { title: 'Total Occupied Rooms:', value: 50 },
-        { title: 'Latest Payment History:', value: 'No payments made yet' },
-        { title: 'Latest Attendance History:', value: 'No attendance recorded yet' },
-        { title: 'Room Allocation Status:', value: 'All rooms allocated' },
-    ];
-
     return (
         <section className="dashboard">
-            <h1>{selectedItem === 'dashboard' ? 'Hostel Management Admin Dashboard' : ''}</h1>
+            <h1>{selectedItem === 'dashboard' ? 'Hostel Management Admin' : ''}</h1>
             {selectedItem === 'dashboard' && (
                 <div className="dashboard-summary">
-                    {summaryItems.map((item, index) => (
-                        <div key={index} className="summary-item">
-                            <h2>{item.title}</h2>
-                            <p>{item.value}</p>
-                        </div>
-                    ))}
+
                 </div>
             )}
             {selectedItem === 'user-search' && (
@@ -46,6 +32,11 @@ const Dashboard = ({ selectedItem }) => {
             {selectedItem === 'attendance-history' && (
                 <div className="attendance-history-placeholder">
                     <AttendanceHistory />
+                </div>
+            )}
+            {selectedItem === 'dashboard' && (
+                <div className="dashboard-image">
+                    <img src="https://drive.google.com/uc?export=view&id=14ub8btkuyIBUWsSe7eXjPJQ4Scf9p_ct" alt="Hostel Management Admin Dashboard" />
                 </div>
             )}
         </section>

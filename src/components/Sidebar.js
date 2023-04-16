@@ -17,7 +17,7 @@ const Sidebar = ({ onItemClick }) => {
             <nav className="nav">
                 <ul>
                     <li className={selectedItem === 'dashboard' ? 'selected' : ''} onClick={() => handleItemClick('dashboard')}>
-                        Dashboard
+                        Welcome
                     </li>
                     <li className={selectedItem === 'user-search' ? 'selected' : ''} onClick={() => handleItemClick('user-search')}>
                         User Search
