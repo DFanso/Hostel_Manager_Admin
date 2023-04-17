@@ -12,8 +12,7 @@ const UserSearch = () => {
   const handleLogin = async () => {
     // Your login or sign-up logic here
     // After a successful login or sign-up, save the token to the localStorage
-    const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MDJjMzY5MjI4MTk0MDE2NjY2MmQiLCJpYXQiOjE2ODE2MzIyNjksImV4cCI6MTY4MTYzNTg2OX0.1Iwx_L8yhjH4bE-XT_VZ7t-sV781YhzQTmhvHvYzn-s";
+    const token = localStorage.getItem("token");
     localStorage.setItem("token", token);
   };
 
