@@ -2,18 +2,15 @@ import React from 'react';
 import './Header.css';
 
 const Header = () => {
-
     const handleLogin = () => {
-        const loginWindow = window.open('/userloginForm.html', 'Login Popup', 'width=400,height=550');
-        loginWindow.addEventListener('unload', () => {
-            if (window.opener && !window.opener.closed) {
-                window.opener.location.reload(); // Reload the parent window after closing the popup
-            }
-        });
-    }
+        window.open('/admin-login', '_blank');
+    };
+
+    const shouldLoadCss = !window.location.href.includes('admin-login');
 
     return (
         <header className="header">
+            {shouldLoadCss && <link rel="stylesheet" href="Header.css" />}
             <div className="header-container">
                 <h2 className="title">Hostel Management System</h2>
                 <button className="login-button" onClick={handleLogin}>Login</button>
