@@ -11,9 +11,7 @@ const Sidebar = ({ onItemClick }) => {
 
     return (
         <aside className="sidebar">
-            <div className="logo-container">
-                <img src="https://drive.google.com/uc?id=1CHQOCAJX4UQznKlOJR6kzsOIkXozE-P8" alt="Logo" className="logo" />
-            </div>
+
             <nav className="nav">
                 <ul>
                     <li className={selectedItem === 'dashboard' ? 'selected' : ''} onClick={() => handleItemClick('dashboard')}>
