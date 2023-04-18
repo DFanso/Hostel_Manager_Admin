@@ -4,6 +4,7 @@ import UserSearch from './UserSearch';
 import RoomManagement from './RoomManagement';
 import PaymentHistory from './PaymentHistory'; // import the PaymentHistory component
 import AttendanceHistory from './AttendanceHistory'; // import the AttendanceHistory component
+import GenerateQRButton from './qr';
 
 const Dashboard = ({ selectedItem }) => {
     return (
@@ -32,6 +33,11 @@ const Dashboard = ({ selectedItem }) => {
             {selectedItem === 'attendance-history' && (
                 <div className="attendance-history-placeholder">
                     <AttendanceHistory />
+                </div>
+            )}
+            {selectedItem === 'qr' && (
+                <div className="qr-history-placeholder">
+                    <GenerateQRButton />
                 </div>
             )}
             {selectedItem === 'dashboard' && (
