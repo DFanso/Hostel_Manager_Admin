@@ -32,6 +32,17 @@ function AttendanceHistory(props) {
     // Add any additional search functionality here
   };
 
+  const tableStyle = {
+    borderCollapse: "separate",
+    borderSpacing: "3px",
+  };
+
+  const cellStyle = {
+    padding: "5px",
+    backgroundColor: "#ffffff",
+    border: "1px solid #ccc",
+  };
+
   return (
     <div className="attendance-history">
       <h2>Attendance History</h2>
@@ -47,18 +58,20 @@ function AttendanceHistory(props) {
         </button>
       </form>
       {/* render attendance history table */}
-      <table>
+      <table style={tableStyle}>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>action</th>
+            <th style={cellStyle}>Date</th>
+            <th style={cellStyle}>action</th>
           </tr>
         </thead>
         <tbody>
           {attendanceRecords.map((record) => (
             <tr key={record._id}>
-              <td>{new Date(record.timestamp).toLocaleDateString()}</td>
-              <td>{record.action}</td>
+              <td style={cellStyle}>
+                {new Date(record.timestamp).toLocaleDateString()}
+              </td>
+              <td style={cellStyle}>{record.action}</td>
             </tr>
           ))}
         </tbody>
