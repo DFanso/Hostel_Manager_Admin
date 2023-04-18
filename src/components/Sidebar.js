@@ -53,6 +53,14 @@ const Sidebar = ({ onItemClick }) => {
           >
             Attendance History
           </li>
+
+          <li
+            className={getItemClassName("qr")}
+            onClick={() => handleItemClick("qr")}
+          >
+            Generate QR
+          </li>
+
         </ul>
       </nav>
     </aside>
