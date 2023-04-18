@@ -11,7 +11,7 @@ function PaymentHistory(props) {
     event.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/payments/${searchTerm}`,
+        `http://20.2.80.190:5100/api/payments/${searchTerm}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
