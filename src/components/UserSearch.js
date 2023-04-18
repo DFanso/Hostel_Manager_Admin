@@ -34,6 +34,17 @@ const UserSearch = () => {
     }
   };
 
+  const tableStyle = {
+    borderCollapse: "separate",
+    borderSpacing: "3px",
+  };
+
+  const cellStyle = {
+    padding: "5px",
+    backgroundColor: "#ffffff",
+    border: "1px solid #ccc",
+  };
+
   return (
     <div className="user-search">
       <h2>Search Students</h2>
@@ -50,10 +61,26 @@ const UserSearch = () => {
         {Array.isArray(searchResults) &&
           searchResults.map((student) => (
             <div key={student._id} className="student-details">
-              <p>Student ID: {student.studentId}</p>
-              <p>Email: {student.email}</p>
-              <p>First Name : {student.firstName}</p>
-              <p>Last Name : {student.lastName}</p>
+              <table style={tableStyle}>
+                <thead>
+                  <tr>
+                    <th style={cellStyle}>Student ID</th>
+                    <th style={cellStyle}>Email</th>
+                    <th style={cellStyle}>First Name</th>
+                    <th style={cellStyle}>Last Name</th>
+                    <th style={cellStyle}>Room No</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style={cellStyle}>{student.studentId}</td>
+                    <td style={cellStyle}>{student.email}</td>
+                    <td style={cellStyle}>{student.firstName}</td>
+                    <td style={cellStyle}>{student.lastName}</td>
+                    <td style={cellStyle}>{student.roomNo}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           ))}
       </div>

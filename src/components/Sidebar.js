@@ -60,7 +60,6 @@ const Sidebar = ({ onItemClick }) => {
           >
             Generate QR
           </li>
-
         </ul>
       </nav>
     </aside>

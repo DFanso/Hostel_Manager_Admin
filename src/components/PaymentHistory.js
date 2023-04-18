@@ -24,6 +24,17 @@ function PaymentHistory(props) {
     }
   };
 
+  const tableStyle = {
+    borderCollapse: "separate",
+    borderSpacing: "3px",
+  };
+
+  const cellStyle = {
+    padding: "5px",
+    backgroundColor: "#ffffff",
+    border: "1px solid #ccc",
+  };
+
   return (
     <div className="payment-history">
       <h2>Payment History</h2>
@@ -38,20 +49,22 @@ function PaymentHistory(props) {
           Search
         </button>
       </form>
-      <table className="payment-history-table">
+      <table className="payment-history-table" style={tableStyle}>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Amount</th>
-            <th>Payer Type</th>
+            <th style={cellStyle}>Date</th>
+            <th style={cellStyle}>Amount</th>
+            <th style={cellStyle}>Payer Type</th>
           </tr>
         </thead>
         <tbody>
           {paymentHistory.map((payment, index) => (
             <tr key={index}>
-              <td>{new Date(payment.datePaid).toLocaleDateString()}</td>
-              <td>{payment.amount}</td>
-              <td>{payment.payerType}</td>
+              <td style={cellStyle}>
+                {new Date(payment.datePaid).toLocaleDateString()}
+              </td>
+              <td style={cellStyle}>{payment.amount}</td>
+              <td style={cellStyle}>{payment.payerType}</td>
             </tr>
           ))}
         </tbody>
