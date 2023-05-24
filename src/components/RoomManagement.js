@@ -12,7 +12,7 @@ function RoomManagement() {
   const addRoom = async () => {
     try {
       const response = await axios.post(
-        "http://20.2.80.190:5100/api/guardian/changeStudentRoom",
+        "http://159.89.203.249:5001/api/guardian/changeStudentRoom",
         {
           studentId,
           roomNo: roomNumber,
@@ -28,7 +28,7 @@ function RoomManagement() {
   const updateRoom = async () => {
     try {
       const response = await axios.post(
-        "http://20.2.80.190:5100/api/guardian/changeStudentRoom",
+        "http://159.89.203.249:5001/api/guardian/changeStudentRoom",
         {
           studentId: updateStudentId,
           roomNo: roomId,

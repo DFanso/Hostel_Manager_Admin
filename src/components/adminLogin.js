@@ -15,7 +15,7 @@ const AdminLogin = ({ onLogin }) => {
   const handleLogin = async (credentials) => {
     try {
       const response = await axios.post(
-        "http://20.2.80.190:5100/api/guardian/login",
+        "http://159.89.203.249:5001/api/guardian/login",
         credentials
       );
       localStorage.setItem("token", response.data.token);
@@ -34,7 +34,7 @@ const AdminLogin = ({ onLogin }) => {
         return;
       }
       await axios.post(
-        "http://20.2.80.190:5100/api/guardian/register",
+        "http://159.89.203.249:5001/api/guardian/register",
         credentials
       );
       handleLogin(credentials);

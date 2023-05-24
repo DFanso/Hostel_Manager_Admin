@@ -22,7 +22,7 @@ const UserSearch = () => {
       console.log(process.env.SERVER_IP);
       console.log(studentId);
       const response = await axios.get(
-        `http://20.2.80.190:5100/api/students/getStudentDetailsByStudentID/${studentId}`,
+        `http://159.89.203.249:5001/api/students/getStudentDetailsByStudentID/${studentId}`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }

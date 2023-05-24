@@ -12,7 +12,7 @@ function AttendanceHistory(props) {
       console.log(studentId, dataCount);
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://20.2.80.190:5100/api/students/${searchTerm}?dataCount=${dataCount}`,
+        `http://159.89.203.249:5001/api/students/${searchTerm}?dataCount=${dataCount}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
